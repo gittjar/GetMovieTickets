@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{84A24FEA-4FE6-4AE9-AFF8-AAC945F4E444}|Default">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.LaskuriOhjelma PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="LaskuriOhjelma/Canvas-Samples/QR1.cs">
+    <Files>
+      <File FileName="LaskuriOhjelma/Counters.cs" />
+      <File FileName="LaskuriOhjelma/Program.cs" />
+      <File FileName="LaskuriOhjelma/Canvas-Samples/QR1.cs" Line="30" Column="1" />
+      <File FileName="LaskuriOhjelma/Movies/FullMetalJacket.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="LaskuriOhjelma" expanded="True">
+            <Node name="LaskuriOhjelma" expanded="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Canvas-Samples" expanded="True">
+                <Node name="QR1.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

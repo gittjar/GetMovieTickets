@@ -1,0 +1,17 @@
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.csproj.AssemblyReference.cache
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.GeneratedMSBuildEditorConfig.editorconfig
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.AssemblyInfoInputs.cache
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.AssemblyInfo.cs
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.csproj.CoreCompileInputs.cache
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/bin/Debug/net7.0/LaskuriOhjelma
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/bin/Debug/net7.0/LaskuriOhjelma.deps.json
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/bin/Debug/net7.0/LaskuriOhjelma.runtimeconfig.json
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/bin/Debug/net7.0/LaskuriOhjelma.dll
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/bin/Debug/net7.0/LaskuriOhjelma.pdb
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/bin/Debug/net7.0/Spectre.Console.dll
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.csproj.CopyComplete
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.dll
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/refint/LaskuriOhjelma.dll
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.pdb
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/LaskuriOhjelma.genruntimeconfig.cache
+/Users/s2200692/ASP-net-harjoitukset/LaskuriOhjelma/LaskuriOhjelma/obj/Debug/net7.0/ref/LaskuriOhjelma.dll
