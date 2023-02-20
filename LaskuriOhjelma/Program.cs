@@ -1,8 +1,26 @@
 ﻿using LaskuriOhjelma;
 using Spectre.Console;
-/*CREATED JARNO .NET22*/
-public static class Program
+using Microsoft.EntityFrameworkCore;
+//using System.Data.Entity;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Reflection.Metadata;
+
+// hae qr-koodit
+using LaskuriOhjelma.CanvasSamples;
+
+
+
+
+namespace LaskuriOhjelma
 {
+class Program
+
+{
+
     public static void Main(string[] args)
 
     {
@@ -14,6 +32,18 @@ public static class Program
         AnsiConsole.Markup("[underline deepskyblue1]The World[/] Is Yours. Press Enter to continue..");
         Console.ReadKey();
         Console.WriteLine("");
+
+        //
+        //  TEST
+        //
+
+        // kutsutaan erillistä metodia, jossa Canvas qr-koodi
+  
+
+
+
+
+
 
         while (true)
         {
@@ -45,8 +75,9 @@ public static class Program
 
         }
         Console.ReadKey();
-
-
-
     }
-}
+
+
+
+
+}}
