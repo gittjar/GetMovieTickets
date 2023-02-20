@@ -11,7 +11,7 @@ namespace LaskuriOhjelma.CanvasSamples
 		public void QrKoodiEka()
 		{
 
-            Console.WriteLine("Kiitos ja nautinnollista elokuvailtaa!");
+            Console.WriteLine("Mukavaa elokuvailtaa!");
             Printer.PrintUnderscored("Esitä tämä QR-koodi kassalla maksua varten.");
             Console.WriteLine("");
 
@@ -257,10 +257,7 @@ namespace LaskuriOhjelma.CanvasSamples
 
         }
 
-		public void QrKoodiToka()
-		{
 
-		}
 
         public void QrKoodiKolmas()
         {

@@ -274,7 +274,7 @@ namespace LaskuriOhjelma.Movies
             {
 
 
-                Console.WriteLine("- * - * -");
+                Console.WriteLine("*** *** ***");
                 Printer.PrintUnderscored("Tuotteet: "); // metodilla alaviiva!
                 Printer.PrintUnderscored("Elokuvaliput: " + kpl + " kpl"); // metodilla alaviiva!
                 Console.WriteLine("Lipun kappalehinta 15,00€");

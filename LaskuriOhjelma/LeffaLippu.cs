@@ -83,7 +83,8 @@ namespace LaskuriOhjelma
                     .PageSize(10)
                     .MoreChoicesText("[grey](Move up and down to reveal more movies)[/]")
                     .AddChoices(new[] {
-                             "Home Alone 1", "Goodfellas",
+                             "Home Alone 1", 
+                             "Goodfellas",
                              "Full Metal Jacket",
                     }));
 
@@ -98,7 +99,8 @@ namespace LaskuriOhjelma
             }
             if (movie == "Goodfellas")
             {
-                Console.WriteLine("Työn alla..2");
+                Goodfellas GFMovie = new Goodfellas();
+                GFMovie.GoodFellas();
             }
             else if (movie == "Full Metal Jacket")
             {
