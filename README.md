@@ -11,4 +11,4 @@ Use commands before run in project folder (.NET Core CLI):
 > dotnet ef migrations remove \
 > dotnet ef migrations add FirstMigration \
 > dotnet ef database update \
-> dotnet run \
+> dotnet run
