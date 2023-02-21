@@ -4,7 +4,7 @@
 
 #### Language: FIN
 
-Use commands before run in project folder (.NET Core CLI): \
+Use commands before run in project folder (.NET Core CLI): 
 
 > dotnet tool install --global dotnet-ef \
 > dotnet add package Microsoft.EntityFrameworkCore.Design \
