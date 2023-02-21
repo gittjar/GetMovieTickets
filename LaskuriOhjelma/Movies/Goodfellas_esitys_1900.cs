@@ -1,17 +1,26 @@
-﻿using System;
+using System;
 using LaskuriOhjelma.CanvasSamples;
 using Spectre.Console;
+using System.Globalization;
+
 
 namespace LaskuriOhjelma.Movies
+
 {
-	public class FMJ_esitys_1830
+        // Tämä on Goodfellas esitys 19:00
+	public class Goodfellas_esitys_1900
 	{
-        public static void FMJ_showtime_1830()
+       // class methods
+        public static void Goodfellas_showtime_1900()
         {
-            string movie = "Full Metal Jacket";
+           
+            string movie = "Goodfellas";
+            // suomiajan esitystä ja euroja varten
+            Thread.CurrentThread.CurrentCulture = new CultureInfo("fi-FI");
             DateTime dt = DateTime.Now;
-            DateTime dt3_FMJ = dt.AddDays(1); // Full Metal Jacket näyttöaika +1d nykyhetkeen ja klo 18:30
-            DateTime dt5_FMJ = dt.AddDays(5); // Full Metal Jacket näyttöaika +5d nykyhetkeen ja klo 21:00
+            // merkitty dt2 = AddDays +2 jne..
+            DateTime dt2_GF = dt.AddDays(2); // Goodfellas näyttöaika +2d nykyhetkeen ja klo 19:00
+            DateTime dt3_GF = dt.AddDays(3); // Goodfellas näyttöaika +3d nykyhetkeen ja klo 20:00
 
             Console.WriteLine("Valitse paikat seuraavaksi. Press enter!");
             Console.ReadKey();
@@ -19,6 +28,7 @@ namespace LaskuriOhjelma.Movies
             // TÄHÄN CREATE TABLE, HUOM NÄYTETÄÄ VIHREÄLLÄ VAPAAT JA VARATUT PUNAISELLA
             // VAPAITA PAIKKOJA VOI VARATA Multiselection Promptilla
             Console.WriteLine("");
+
             // Create a table
             var table = new Table();
             var listGreenSeats = new List<String>();
@@ -26,56 +36,43 @@ namespace LaskuriOhjelma.Movies
             // Add some columns
             table.AddColumn(new TableColumn("Rivit").Centered());
             table.AddColumn(new TableColumn("S").Centered());
+            table.AddColumn(new TableColumn("").Centered());
             table.AddColumn(new TableColumn("C").Centered());
+            table.AddColumn(new TableColumn("").Centered());
             table.AddColumn(new TableColumn("R").Centered());
+            table.AddColumn(new TableColumn("").Centered());
             table.AddColumn(new TableColumn("E").Centered());
+            table.AddColumn(new TableColumn("").Centered());
             table.AddColumn(new TableColumn("E").Centered());
+            table.AddColumn(new TableColumn("").Centered());
             table.AddColumn(new TableColumn("N").Centered());
-            table.AddColumn(new TableColumn("*").Centered());
-            table.AddColumn(new TableColumn("I").Centered());
-            table.AddColumn(new TableColumn("S").Centered());
-            table.AddColumn(new TableColumn("*").Centered());
-            table.AddColumn(new TableColumn("H").Centered());
-            table.AddColumn(new TableColumn("E").Centered());
-            table.AddColumn(new TableColumn("R").Centered());
-            table.AddColumn(new TableColumn("E").Centered());
-            table.AddColumn(new TableColumn("!").Centered());
             // RIVI 1
             table.AddRow(new Panel("[blue]R-1[/]"),
              new Panel("[green]P-1[/]").BorderColor(Color.Green3),
              new Panel("[green]P-2[/]").BorderColor(Color.Green3),
              new Panel("[green]P-3[/]").BorderColor(Color.Green3),
-             new Panel("[green]P-4[/]").BorderColor(Color.Green3),
-             new Panel("[green]P-5[/]").BorderColor(Color.Green3),
+             new Panel("[red]P-4[/]").BorderColor(Color.Red3),  // red
+             new Panel("[red]P-5[/]").BorderColor(Color.Red3),  // red
              new Panel("[green]P-6[/]").BorderColor(Color.Green3),
              new Panel("[green]P-7[/]").BorderColor(Color.Green3),
              new Panel("[green]P-8[/]").BorderColor(Color.Green3),
              new Panel("[green]P-9[/]").BorderColor(Color.Green3),
              new Panel("[green]P-10[/]").BorderColor(Color.Green3),
-             new Panel("[green]P-11[/]").BorderColor(Color.Green3),
-             new Panel("[green]P-12[/]").BorderColor(Color.Green3),
-             new Panel("[green]P-13[/]").BorderColor(Color.Green3),
-             new Panel("[green]P-14[/]").BorderColor(Color.Green3),
-             new Panel("[green]P-15[/]").BorderColor(Color.Green3)
+             new Panel("[green]P-11[/]").BorderColor(Color.Green3)
            );
-
             // RIVI 2
             table.AddRow(new Panel("[blue]R-2[/]"),
                 new Panel("[red]P-1[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-2[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-3[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-4[/]").BorderColor(Color.Red3),
+                new Panel("[green]P-2[/]").BorderColor(Color.Green3),
+                new Panel("[green]P-3[/]").BorderColor(Color.Green3),
+                new Panel("[green]P-4[/]").BorderColor(Color.Green3),
                 new Panel("[red]P-5[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-6[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-7[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-8[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-9[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-10[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-11[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-12[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-13[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-14[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-15[/]").BorderColor(Color.Red3)
+                new Panel("[red]P-11[/]").BorderColor(Color.Red3)
                 );
             // RIVI 3
             table.AddRow(new Panel("[blue]R-3[/]"),
@@ -86,35 +83,13 @@ namespace LaskuriOhjelma.Movies
                 new Panel("[red]P-5[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-6[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-7[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-8[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-9[/]").BorderColor(Color.Red3),
+                new Panel("[grey37]P-8[/]").BorderColor(Color.Grey46), // Disabled
+                new Panel("[grey37]P-9[/]").BorderColor(Color.Grey46), // Harmaana
                 new Panel("[red]P-10[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-11[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-12[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-13[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-14[/]").BorderColor(Color.Red3),
-                new Panel("[grey27]P-15[/]").BorderColor(Color.Grey27)
+                new Panel("[red]P-11[/]").BorderColor(Color.Red3)
                 );
             // RIVI 4
             table.AddRow(new Panel("[blue]R-4[/]"),
-                new Panel("[green]P-1[/]").BorderColor(Color.Green3),
-                new Panel("[green]P-2[/]").BorderColor(Color.Green3),
-                new Panel("[green]P-3[/]").BorderColor(Color.Green3),
-                new Panel("[red]P-4[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-5[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-6[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-7[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-8[/]").BorderColor(Color.Red3),
-                new Panel("[green]P-9[/]").BorderColor(Color.Green3),
-                new Panel("[red]P-10[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-11[/]").BorderColor(Color.Red3),
-                new Panel("[green]P-12[/]").BorderColor(Color.Green3),
-                new Panel("[green]P-13[/]").BorderColor(Color.Green3),
-                new Panel("[green]P-14[/]").BorderColor(Color.Green3),
-                new Panel("[green]P-15[/]").BorderColor(Color.Green3)
-                );
-            // RIVI 5
-            table.AddRow(new Panel("[blue]R-5[/]"),
                 new Panel("[red]P-1[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-2[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-3[/]").BorderColor(Color.Red3),
@@ -122,68 +97,36 @@ namespace LaskuriOhjelma.Movies
                 new Panel("[red]P-5[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-6[/]").BorderColor(Color.Red3),
                 new Panel("[red]P-7[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-8[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-9[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-10[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-11[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-12[/]").BorderColor(Color.Red3),
-                new Panel("[red]P-13[/]").BorderColor(Color.Red3),
-                new Panel("[grey27]P-14[/]").BorderColor(Color.Grey27),
-                new Panel("[grey27]P-15[/]").BorderColor(Color.Grey27)
+                new Panel("[red]P-8[/]").BorderColor(Color.Red3), 
+                new Panel("[green]P-9[/]").BorderColor(Color.Green3), 
+                new Panel("[green]P-10[/]").BorderColor(Color.Green3),
+                new Panel("[red]P-11[/]").BorderColor(Color.Red3)
                 );
 
-            // Add some rows
-            // table.AddRow("Baz", "[green]Qux[/]");
-            // table.AddRow(new Markup("[blue]Corgi[/]"), new Panel("Waldo"));
 
-            // green paikat listaan
-            // rivi 1
-            listGreenSeats.Add("R1-P1");
-            listGreenSeats.Add("R1-P2");
-            listGreenSeats.Add("R1-P3");
-            listGreenSeats.Add("R1-P4");
-            listGreenSeats.Add("R1-P5");
-            listGreenSeats.Add("R1-P6");
-            listGreenSeats.Add("R1-P7");
-            listGreenSeats.Add("R1-P8");
-            listGreenSeats.Add("R1-P9");
-            listGreenSeats.Add("R1-P10");
-            listGreenSeats.Add("R1-P11");
-            listGreenSeats.Add("R1-P12");
-            listGreenSeats.Add("R1-P13");
-            listGreenSeats.Add("R1-P14");
-            listGreenSeats.Add("R1-P15");
-            // rivi 4 green paikat
-            listGreenSeats.Add("R4-P1");
-            listGreenSeats.Add("R4-P2");
-            listGreenSeats.Add("R4-P3");
-            listGreenSeats.Add("R4-P9");
-            listGreenSeats.Add("R4-P12");
-            listGreenSeats.Add("R4-P13");
-            listGreenSeats.Add("R4-P14");
-            listGreenSeats.Add("R4-P15");
+
+
 
             // Render the table to the console
-            table.Border(TableBorder.None);
+            table.Border(TableBorder.Rounded);
             table.Centered();
             AnsiConsole.Write(table);
 
             Console.WriteLine("");
-            Console.WriteLine("Salin istumapaikkojen määrä yhteensä 75 kappaletta");
-            // green paikat listalta ulos!
-            Console.WriteLine("Vapaita paikkoja yhteensä: " + listGreenSeats.Count);
+            Console.WriteLine("Salin istumapaikkojen määrä yhteensä 44 kappaletta");
+
+            Console.WriteLine("Vapaita paikkoja yhteensä: 14");
 
             // Create a list of seats
             AnsiConsole.Write(new BarChart()
                 .Width(75)
-                .Label("[green bold underline]Varaustilanne[/]")
+                .Label($"[green bold underline]Esitysaika: {dt2_GF:d MMM yyyy} [/]"+"[green bold underline] klo 19:00 [/]")
                 .CenterLabel()
-                .AddItem("Vapaana", listGreenSeats.Count, Color.Green1)
-                .AddItem("Varattu", 49, Color.Red1)
-                .AddItem("Muut", 3, Color.Grey19));
+                .AddItem("Vapaana", 14, Color.Green1)
+                .AddItem("Varattu", 28, Color.Red1)
+                .AddItem("Muut", 2, Color.Grey19));
 
             Console.WriteLine("");
-
 
             // Multiselection!
             // Valitkaa paikkanne!
@@ -198,14 +141,28 @@ namespace LaskuriOhjelma.Movies
                         "[green]<enter>[/] vahvistaaksesi paikat. VALITSE VÄHINTÄÄN 1 Paikka, " +
                         "voit myöhemmin perua varauksen tarvittaessa!)[/]")
                     // Choises Group rivettäin!
-                    // rivi 1 jne
+                    // rivi 1 vapaat paikat
                     .AddChoiceGroup("Rivi-1", new[] {
-                        "R1-P1","R1-P2","R1-P3","R1-P4","R1-P5","R1-P6","R1-P7","R1-P8","R1-P9",
-                        "R1-P10","R1-P11","R1-P12","R1-P13","R1-P14","R1-P15",
+                        "R-1 > Paikka #1",
+                        "R-1 > Paikka #2",
+                        "R-1 > Paikka #3",
+                        "R-1 > Paikka #6",
+                        "R-1 > Paikka #7",
+                        "R-1 > Paikka #8",
+                        "R-1 > Paikka #9",
+                        "R-1 > Paikka #10",
+                        "R-1 > Paikka #11",
                      })
-                    // rivi 4 jne
+                    // rivi 2 vapaat paikat
+                    .AddChoiceGroup("Rivi-2", new[] {
+                        "R-2 > Paikka #2",
+                        "R-2 > Paikka #3",
+                        "R-2 > Paikka #4",
+                     })
+                    // rivi 4 vapaat paikat
                     .AddChoiceGroup("Rivi-4", new[] {
-                        "R4-P1", "R4-P2", "R4-P3","R4-P9", "R4-P12", "R4-P13","R4-P14", "R4-P15",
+                        "R-4 > Paikka #9", 
+                        "R-4 > Paikka #10",
                      })
                     /*
                     .AddChoices(new[] {
@@ -214,10 +171,7 @@ namespace LaskuriOhjelma.Movies
                     */
                     );
 
-            // tulostetaan valitut paikat ja kappalemäärä
-
-
-            AnsiConsole.Status()
+                AnsiConsole.Status()
                 .Start("Ladataan tiedot ... odota hetki", ctx =>
                 {
                     // Simulate some work
@@ -228,23 +182,10 @@ namespace LaskuriOhjelma.Movies
                     ctx.Spinner(Spinner.Known.Ascii);
                     ctx.SpinnerStyle(Style.Parse("violet"));
                     // Simulate some work
-                    Thread.Sleep(3500);
+                    Thread.Sleep(2200);
                 });
 
-
-            //  Laskuri 
-
-            //  foreach (string seat in seats)
-            //  {
-            //      AnsiConsole.WriteLine(seat);
-            //      kpl++;
-            //  }
-            //  Console.WriteLine("Olette hankkimassa: " + kpl + " kappaletta lippuja.");
-            //  Console.WriteLine("Hinta yht. " + kpl * 15 + " euroa.");
-
-
-
-            Console.WriteLine("");
+                 Console.WriteLine("");
 
             // Varauksen yhteenveto!
             int kpl = 0;
@@ -253,7 +194,7 @@ namespace LaskuriOhjelma.Movies
             Printer.PrintUnderscored("** High-five Cinema **");
             Console.WriteLine("");
             Console.WriteLine("Elokuva: " + movie);
-            Console.WriteLine($"Aika: {dt3_FMJ:d MMM yyyy}" + " klo 18:30");
+            Console.WriteLine($"Aika: {dt2_GF:d MMM yyyy}" + " klo 19:00");
             Console.WriteLine(("").PadRight(32, '-'));
 
             foreach (string seat in seats)
@@ -306,27 +247,18 @@ namespace LaskuriOhjelma.Movies
                 }
                 else if (Selection == "02 - Lopeta")
                 {
-                //
-                //  TABLE
-                //
-
-                var footertable = new Table();
-
-                footertable.AddColumn("Elokuva: " + movie + "\n" + $"Aika: {dt3_FMJ:d MMM yyyy}" + " (klo 18:30)");
-                footertable.AddColumn("Tilaus peruttu");
-
-                footertable.AddRow("Varaustapahtuma: " + "[red3]Ei vahvistettu[/]", "");
-                footertable.AddRow(
-                    "Paina enter lopettaksesi." + "\n" + "Tilaustapahtuma on peruttu ja tiliäsi ei veloitettu!", "[lime]See you next time![/]"
-                );
-                    // Render the table to the console
-                    AnsiConsole.Write(footertable);
+                    Console.WriteLine("Paina enter lopettaksesi. Ostotapahtuma on peruttu ja tiliäsi ei veloitettu!");
                     Console.ReadKey();
-
                 }
+
+
+
+
+
+
             }
+
         }
     }
-}
-
-
+    
+     }

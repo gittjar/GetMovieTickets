@@ -12,9 +12,6 @@ using System.Reflection.Metadata;
 // hae qr-koodit
 using LaskuriOhjelma.CanvasSamples;
 
-
-
-
 namespace LaskuriOhjelma
 {
 class Program
@@ -25,7 +22,7 @@ class Program
 
     {
         AnsiConsole.Write(
-        new FigletText("Ohjelma v.1.0")
+        new FigletText("O v.1.0")
         .Centered()
         .Color(Color.LightCyan1));
 
