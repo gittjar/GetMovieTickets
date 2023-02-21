@@ -4,11 +4,11 @@
 
 #### Language: FIN
 
-Use commands before run in project folder (.NET Core CLI):
+Use commands before run in project folder (.NET Core CLI): \
 
-> dotnet tool install --global dotnet-ef
-> dotnet add package Microsoft.EntityFrameworkCore.Design
-> dotnet ef migrations remove
-> dotnet ef migrations add FirstMigration
-> dotnet ef database update
-> dotnet run
+> dotnet tool install --global dotnet-ef \
+> dotnet add package Microsoft.EntityFrameworkCore.Design \
+> dotnet ef migrations remove \
+> dotnet ef migrations add FirstMigration \
+> dotnet ef database update \
+> dotnet run \
