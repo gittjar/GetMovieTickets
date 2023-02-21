@@ -79,7 +79,7 @@ namespace LaskuriOhjelma.Movies
 
                     }));
             //
-            // KLO 21:00 ESITYS --> Tämä kesken
+            // KLO 21:00 ESITYS
             //
 
             if (selectionFMJ == $"{dt5_FMJ:ddd MMM %d, yyyy}" + " klo 21:00")
@@ -90,7 +90,7 @@ namespace LaskuriOhjelma.Movies
 
 
             //
-            // KLO 18:30 ESITYS --> Tämä valmis
+            // KLO 18:30 ESITYS
             //
 
             if (selectionFMJ == $"{dt3_FMJ:ddd MMM %d, yyyy}" + " klo 18:30")

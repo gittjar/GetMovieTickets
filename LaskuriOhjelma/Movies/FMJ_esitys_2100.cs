@@ -2,6 +2,7 @@
 using LaskuriOhjelma.CanvasSamples;
 using Spectre.Console;
 
+
 namespace LaskuriOhjelma.Movies
 
 {
@@ -28,6 +29,7 @@ namespace LaskuriOhjelma.Movies
             var table = new Table();
             var listGreenSeats = new List<String>();
             List<int> listGreySeats = new List<int>();
+
 
             // Add some columns
             table.AddColumn(new TableColumn("Rivit").Centered());
@@ -169,7 +171,7 @@ namespace LaskuriOhjelma.Movies
             // Create a list of seats
             AnsiConsole.Write(new BarChart()
                 .Width(75)
-                .Label($"[green bold underline] Esitysaika: {dt5_FMJ:d MMM yyyy} [/]"+"[green bold underline] klo 21:00 [/]")
+                .Label($"[green bold underline]Varaustilanne ja esitysaika: {dt5_FMJ:d MMM yyyy} [/]"+"[green bold underline] klo 21:00 [/]")
                 .CenterLabel()
                 .AddItem("Vapaana", listGreenSeats.Count, Color.Green1)
                 .AddItem("Varattu", 68, Color.Red1)
@@ -229,7 +231,7 @@ namespace LaskuriOhjelma.Movies
             int kpl = 0;
 
             Console.WriteLine("Yhteenveto varauksesta");
-            Printer.PrintUnderscored("[hotpink]** High-five Cinema **[/]");
+            Printer.PrintUnderscored("** High-five Cinema **");
             Console.WriteLine("");
             Console.WriteLine("Elokuva: " + movie);
             Console.WriteLine($"Aika: {dt5_FMJ:d MMM yyyy}" + " klo 21:00");
@@ -285,7 +287,21 @@ namespace LaskuriOhjelma.Movies
                 }
                 else if (Selection == "02 - Lopeta")
                 {
-                    Console.WriteLine("Paina enter lopettaksesi. Ostotapahtuma on peruttu ja tiliäsi ei veloitettu!");
+                //
+                //  TABLE
+                //
+
+                var footertable = new Table();
+
+                footertable.AddColumn("Elokuva: " + movie + "\n" + $"Aika: {dt5_FMJ:d MMM yyyy}" + " (klo 21:00)");
+                footertable.AddColumn("Tilaus peruttu");
+
+                footertable.AddRow("Varaustapahtuma: " + "[red3]Ei vahvistettu[/]", "");
+                footertable.AddRow(
+                    "Paina enter lopettaksesi." + "\n" + "Tilaustapahtuma on peruttu ja tiliäsi ei veloitettu!", "[lime]See you next time![/]"
+                );
+                    // Render the table to the console
+                    AnsiConsole.Write(footertable);
                     Console.ReadKey();
                 }
             }

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using Spectre.Console;
 
 public class KantaContext : DbContext
 {

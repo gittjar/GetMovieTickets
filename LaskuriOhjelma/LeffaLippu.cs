@@ -17,7 +17,7 @@ namespace LaskuriOhjelma
             Thread.CurrentThread.CurrentCulture = new CultureInfo("fi-FI");
 
             AnsiConsole.Write(
-            new FigletText(" ! Welcome to High-Five Cinema ! ")
+            new FigletText(" ! TEXT ! ")
             .Centered()
             .Color(Color.Pink1));
 
