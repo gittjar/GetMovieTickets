@@ -1,23 +1,20 @@
 ﻿using LaskuriOhjelma;
 using Spectre.Console;
 using Microsoft.EntityFrameworkCore;
-//using System.Data.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Metadata;
+//using System.Data.Entity;
 
-// hae qr-koodit
 using LaskuriOhjelma.CanvasSamples;
 
 namespace LaskuriOhjelma
 {
 class Program
-
 {
-
     public static void Main(string[] args)
 
     {
@@ -30,18 +27,6 @@ class Program
         Console.ReadKey();
         Console.WriteLine("");
 
-        //
-        //  TEST
-        //
-
-        // kutsutaan erillistä metodia, jossa Canvas qr-koodi
-  
-
-
-
-
-
-
         while (true)
         {
 
@@ -52,11 +37,11 @@ class Program
                     .PageSize(10)
                     .MoreChoicesText("[grey](Move up and down to reveal more)[/]")
                     .AddChoices(new[] {
-                                        "01 - Varaa elokuvalippu",
+                                        "01 - High-five Cinema",
                                         "02 - Lopeta",
                     }));
 
-            if (Selection == "01 - Varaa elokuvalippu")
+            if (Selection == "01 - High-five Cinema")
             {
                 LeffaLippu LeffalipunVaraus = new LeffaLippu();
                 LeffalipunVaraus.VaraaLeffalippu();
@@ -73,8 +58,5 @@ class Program
         }
         Console.ReadKey();
     }
-
-
-
 
 }}

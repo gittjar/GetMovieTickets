@@ -229,6 +229,11 @@ namespace LaskuriOhjelma.Movies
                 Console.WriteLine("");
                 Console.WriteLine("Kiitos asioinnista ja tervetuloa uudelleen!");
 
+
+
+
+
+
                 // Pyydetään vahvistus
                 var Selection = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()

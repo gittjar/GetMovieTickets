@@ -257,13 +257,6 @@ namespace LaskuriOhjelma.CanvasSamples
 
         }
 
-
-
-        public void QrKoodiKolmas()
-        {
-
-        }
-
     }
 }
 
