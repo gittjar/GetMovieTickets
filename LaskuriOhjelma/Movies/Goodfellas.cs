@@ -53,6 +53,8 @@ namespace LaskuriOhjelma.Movies
             table_Goodfellas.Centered();
             AnsiConsole.Write(table_Goodfellas);
 
+
+
             // Tässä seuraavat näytökset!
             Console.WriteLine("Seuraavat näytökset:");
             Console.WriteLine($"{dt2_GF:ddd MMM %d, yyyy}" + " klo 19:00");

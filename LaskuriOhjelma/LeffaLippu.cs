@@ -95,7 +95,8 @@ namespace LaskuriOhjelma
 
             if (movie == "Home Alone 1")
             {
-                Console.WriteLine("Työn alla..1");
+                Homealone HAMovie = new Homealone();
+                HAMovie.HomeAlone();
             }
             if (movie == "Goodfellas")
             {

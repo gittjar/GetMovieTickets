@@ -307,7 +307,4 @@ namespace LaskuriOhjelma.Movies
             }
         }
         }
-
     }
-
-

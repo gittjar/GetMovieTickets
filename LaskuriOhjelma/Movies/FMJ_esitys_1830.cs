@@ -301,8 +301,9 @@ namespace LaskuriOhjelma.Movies
                 if (Selection == "01 - Kyllä")
                 {
                     // kutsutaan erillistä metodia, jossa Canvas qr-koodi
-                    QR1 QrKoodi1 = new QR1();
-                    QrKoodi1.QrKoodiEka();
+
+                        QR2 QrKoodi2 = new QR2();
+                        QrKoodi2.QrKoodiToka();
                 }
                 else if (Selection == "02 - Lopeta")
                 {
