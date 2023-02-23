@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Reflection.Metadata;
 //using System.Data.Entity;
-
+// gittjar 22.2.2023
 using LaskuriOhjelma.CanvasSamples;
 
 namespace LaskuriOhjelma
