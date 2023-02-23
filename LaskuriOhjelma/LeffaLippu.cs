@@ -30,7 +30,6 @@ namespace LaskuriOhjelma
 
             // Table päivämäärät
 
-
             Console.WriteLine("Olet aikavyöhykkeellä: {0}", localZone.DisplayName);
             Console.WriteLine(now.ToString("ddd MMMM %d, yyyy"));
             Console.WriteLine(now.ToString("HH:mm"));

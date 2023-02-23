@@ -75,7 +75,6 @@ namespace LaskuriOhjelma.Movies
 
 
             // Goodfellas KLO 19:00 ESITYS
-
             if (selectionGF == $"{dt2_GF:ddd MMM %d, yyyy}" + " klo 19:00")
             {
                 // static metodin kutsu!
@@ -83,12 +82,10 @@ namespace LaskuriOhjelma.Movies
             }
 
             // Goodfellas KLO 20:00 ESITYS
-
             if (selectionGF == $"{dt3_GF:ddd MMM %d, yyyy}" + " klo 20:00")
             {
                 // static metodin kutsu
                 Goodfellas_esitys_2000.Goodfellas_showtime_2000();
-
             }       
 
         }
