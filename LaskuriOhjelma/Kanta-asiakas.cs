@@ -76,41 +76,6 @@ namespace LaskuriOhjelma
             Console.WriteLine("");
 
         // DELETE ID
-           /* 
-           int del;
-
-           while (true)
-            {
-                while(!int.TryParse(Console.ReadLine(), out del)) Console.WriteLine("Vain numerot kelpaavat!");
-                {
-                    if (del < 0)
-                    {
-                    AnsiConsole.Markup("[red]Annoit negatiivisen luvun![/]");
-                    }
-                    else if (del == 0)
-                    {
-                    AnsiConsole.Markup("[red]Annoit nollan![/]");    
-                    }
-  
-                    else if (del == 999)
-                    {
-                    AnsiConsole.Markup("[lime]Valitsit jatka ohjelmaa.[/]");
-                    break;
-                    }
-                    else if (del > 0)
-                    { 
-                        AnsiConsole.Markup("[white on blueviolet]Poista käyttäjä? Anna ID nro, joka poistetaan tai - kirjoita 999 - jatkaaksesi.[/]");   
-                        Console.WriteLine("");
-
-                        var deleteasiakas = new Asiakas() { ID = del };
-                        db.Asiakas.Attach(deleteasiakas);
-                        db.Asiakas.Remove(deleteasiakas);
-                        db.SaveChanges();
-                        Console.WriteLine($"Poistettu onnistuneesti asiakas ID: {del}");
-                        //break;
-                        
-                    }  
-                    */ 
                     
                     while (true)
                     {
@@ -124,46 +89,50 @@ namespace LaskuriOhjelma
                                                 "01 - Kyllä",
                                                 "02 - Ei (siirry elokuviin)",
                         }));
+                        if (Selection == "01 - Kyllä")
 
-                    if (Selection == "01 - Kyllä")
-                    {
-                        try
                         {
+                    
+                            // using var db = new KantaContext();
+                                Console.Write("Enter the user ID to delete, or press ENTER to continue: ");
+                                int inputDelete;
+                                bool isValid = int.TryParse(Console.ReadLine(), out inputDelete);
+                                if (!isValid || inputDelete <= 0)
+                                {
+                                    Console.WriteLine("Invalid ID. Operation cancelled.");
+                                    return;
+                                }
+                                var userToDelete = db.Asiakas?.SingleOrDefault(r => r.ID == inputDelete);
+                                if (userToDelete == null)
+                                {
+                                    Console.WriteLine($"User with ID {inputDelete} not found. Operation cancelled.");
+                                    return;
+                                }
+                                Console.WriteLine($"Are you sure you want to delete record with ID {inputDelete}? (Y/N)");
+                                string? confirmation = Console.ReadLine()?.ToLower();
+                                if (confirmation != "y")
+                                {
+                                    Console.WriteLine("Operation cancelled.");
+                                    return;
+                                }
+                                db.Asiakas?.Remove(userToDelete);
+                                db.SaveChanges();
+                                Console.WriteLine($"User with ID {inputDelete} deleted successfully.");
 
-                        AnsiConsole.Markup("[white on blueviolet]Poista käyttäjä? Anna ID nro, joka poistetaan[/]");   
-                        Console.WriteLine("");
-
-                        int del = Convert.ToInt32(Console.ReadLine());
-
-                        var deleteasiakas = new Asiakas() { ID = del };
-                        db.Asiakas.Attach(deleteasiakas);
-                        db.Asiakas.Remove(deleteasiakas);
-                        db.SaveChanges();
-                        Console.WriteLine($"Poistettu onnistuneesti asiakas ID: {del}");
-                        //break;    
-                        }
-                        catch (System.Exception)
-                        {
-                            Console.WriteLine("Antamaasi ID:tä ei löydy asiakasrekisteristä!");
-
-                            AnsiConsole.Status()
-                            .Start("Ladataan tiedot ... odota hetki", ctx =>
+                                AnsiConsole.Status()
+                                .Start("Ladataan tiedot ... odota hetki", ctx =>
+                                {
+                                    ctx.Status("Ladataan..");
+                                    ctx.Spinner(Spinner.Known.Aesthetic);
+                                    ctx.SpinnerStyle(Style.Parse("aqua"));
+                                    Thread.Sleep(3000);
+                                });
+                                                        
+                            }
+                            else if (Selection == "02 - Ei (siirry elokuviin)")
                             {
-                                ctx.Status("Ladataan..");
-                                ctx.Spinner(Spinner.Known.Aesthetic);
-                                ctx.SpinnerStyle(Style.Parse("aqua"));
-                                Thread.Sleep(3000);
-                            });                            
-                        }
-                       // finally
-                       // {
-                            // here something code
-                        // }
-                    }
-                    else if (Selection == "02 - Ei (siirry elokuviin)")
-                    {
-                        break;
-                    }
+                                break;
+                            }
                 }
             }
     }}
